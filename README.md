@@ -37,9 +37,6 @@ Includes structured and well-documented test cases covering different functional
 ### 🐞 Bug Reports
 Contains sample bug reports with proper steps to reproduce, expected vs actual results, and severity levels.
 
-### 🔗 API Testing
-Includes Postman collections and API test scenarios used during testing.
-
 ### 📸 Screenshots
 Proof of testing activities and execution results.
 
