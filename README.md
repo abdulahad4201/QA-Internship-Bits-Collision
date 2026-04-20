@@ -8,7 +8,7 @@ This repository contains my work and learning during my internship as a **QA Int
 
 - **Role:** QA Intern  
 - **Company:** Bits Collision  
-- **Duration:** Nov 25 - March 26  
+- **Duration:** Nov 2025 - March 2026  
 - **Domain:** Web & Mobile Application Testing  
 
 During this internship, I worked on real-world projects and gained hands-on experience in identifying defects, writing test cases, and ensuring software quality.
