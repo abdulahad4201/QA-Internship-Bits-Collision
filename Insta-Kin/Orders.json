@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Orders API - Instakin (DEV)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add To Cart (v2)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v2/order/add-to-cart",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ProductId\": 5114,\n  \"ProductVariantId\": null,\n  \"Quantity\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Get Cart",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/cart"
+      }
+    },
+    {
+      "name": "Add To Cart (v1)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/add-to-cart",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"ProductId\": 144,\n  \"ProductVariantId\": null,\n  \"Quantity\": 1\n}"
+        }
+      }
+    },
+    {
+      "name": "Edit Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/edit-cart",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"OrderItemId\": 4,\n  \"Quantity\": 2\n}"
+        }
+      }
+    },
+    {
+      "name": "Checkout",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/checkout",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"OrderId\": 152,\n  \"PaymentType\": 2,\n  \"DLFullName\": \"Jane Doe\",\n  \"DLPhone\": \"+15551234567\",\n  \"DLEmail\": \"jane.doe@example.com\",\n  \"DLStAddress\": \"123 Main Street\",\n  \"City\": \"Anytown\",\n  \"PostalCode\": \"A1B 2C3\",\n  \"DLInstructions\": \"Leave package on front porch\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Complete Stripe Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/complete-stripe-payment/6"
+      }
+    },
+    {
+      "name": "Order History",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{customer_token}}" }
+        ],
+        "url": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/order-history"
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "info": {
+    "name": "Products",
+    "_postman_id": "coll_products_001",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/product/categories",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": ["v1", "product", "categories"],
+          "query": [
+            {
+              "key": "parentCategoryId",
+              "value": "1",
+              "disabled": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/product/products?PageNo=1&PageSize=100&CityID=3",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": ["v1", "product", "products"],
+          "query": [
+            { "key": "PageNo", "value": "1" },
+            { "key": "PageSize", "value": "100" },
+            { "key": "SearchTerm", "value": "dell", "disabled": true },
+            { "key": "ProductSeries", "value": "2", "disabled": true },
+            { "key": "CategoryId", "value": "3", "disabled": true },
+            { "key": "CityID", "value": "3" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Product Detail",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "CurrencyID",
+            "value": "1"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/product/product/4074",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": ["v1", "product", "product", "4074"]
+        }
+      }
+    },
+    {
+      "name": "Get All Categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/product/GetAllCategories",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": ["v1", "product", "GetAllCategories"]
+        }
+      }
+    }
+  ]
+}

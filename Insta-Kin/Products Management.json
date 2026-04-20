@@ -1,0 +1,170 @@
+{
+  "info": {
+    "name": "Products Management (v1 + v2)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base",
+      "value": "https://core.instakin-dev.hostinger.bitscollision.net"
+    }
+  ],
+  "item": [
+    {
+      "name": "v1 - Products",
+      "item": [
+        {
+          "name": "Get All Products (Admin)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/v1/product/GetAllAdminProducts?PageNumber=1&PageSize=10",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "GetAllAdminProducts"],
+              "query": [
+                { "key": "PageNumber", "value": "1" },
+                { "key": "PageSize", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/v1/product/CreateProduct",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "CreateProduct"]
+            },
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "ProductName", "value": "Sample Product", "type": "text" },
+                { "key": "CategoryID", "value": "1", "type": "text" },
+                { "key": "StatusID", "value": "2", "type": "text" },
+                { "key": "PlatformOrientedETA", "value": "3", "type": "text" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{base}}/v1/product/UpdateProduct?ProductID=1",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "UpdateProduct"],
+              "query": [
+                { "key": "ProductID", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Product Detail",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/v1/product/GetProductDetail?ProductID=1",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "GetProductDetail"],
+              "query": [
+                { "key": "ProductID", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Product Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "url": {
+              "raw": "{{base}}/v1/product/UpdateStatusProduct",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "UpdateStatusProduct"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ProductID\": 34,\n  \"StatusID\": 2\n}"
+            }
+          }
+        },
+        {
+          "name": "Admin Vendor List",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/v1/product/admin-vendor-list",
+              "host": ["{{base}}"],
+              "path": ["v1", "product", "admin-vendor-list"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "v2 - Products",
+      "item": [
+        {
+          "name": "Create Product (v2)",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base}}/v2/product/CreateProduct",
+              "host": ["{{base}}"],
+              "path": ["v2", "product", "CreateProduct"]
+            }
+          }
+        },
+        {
+          "name": "Update Product (v2)",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{base}}/v2/product/UpdateProduct?ProductID=1",
+              "host": ["{{base}}"],
+              "path": ["v2", "product", "UpdateProduct"],
+              "query": [
+                { "key": "ProductID", "value": "1" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get All Products (Admin v2)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/v2/product/GetAllAdminProducts?PageNumber=1&PageSize=10",
+              "host": ["{{base}}"],
+              "path": ["v2", "product", "GetAllAdminProducts"],
+              "query": [
+                { "key": "PageNumber", "value": "1" },
+                { "key": "PageSize", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Product Detail (v2)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/v2/product/GetProductDetail?ProductID=1",
+              "host": ["{{base}}"],
+              "path": ["v2", "product", "GetProductDetail"],
+              "query": [
+                { "key": "ProductID", "value": "1" }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

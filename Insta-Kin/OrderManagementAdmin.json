@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "1e28a5a8-ad23-4341-8452-4cfbc4c4d711",
+    "name": "OrderManagementAdmin",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GetAllOrdersAdmin",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_ADMIN_TOKEN_HERE"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/GetAllOrdersAdmin?PageNumber=1&PageSize=10",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "GetAllOrdersAdmin"
+          ],
+          "query": [
+            { "key": "PageNumber", "value": "1" },
+            { "key": "PageSize", "value": "10" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Order Status",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_ADMIN_TOKEN_HERE"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"OrderID\": 1,\n  \"StatusID\": 3\n}"
+        },
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/update-order-status",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "update-order-status"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Order History",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_TOKEN_HERE"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/GetOrdersHistory?PageNumber=1&PageSize=50",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "GetOrdersHistory"
+          ],
+          "query": [
+            { "key": "PageNumber", "value": "1" },
+            { "key": "PageSize", "value": "50" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Order Details",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_ADMIN_TOKEN_HERE"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/get-order-detail?OrderID=74",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "get-order-detail"
+          ],
+          "query": [
+            { "key": "OrderID", "value": "74" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Order Source",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_ADMIN_TOKEN_HERE"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/Update-order-Source?OrderItemID=1&SourceID=2",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "Update-order-Source"
+          ],
+          "query": [
+            { "key": "OrderItemID", "value": "1" },
+            { "key": "SourceID", "value": "2" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Product Sources",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer YOUR_ADMIN_TOKEN_HERE"
+          }
+        ],
+        "url": {
+          "raw": "https://core.instakin-dev.hostinger.bitscollision.net/v1/order/Get-Product-Sources?ProductID=3988",
+          "protocol": "https",
+          "host": [
+            "core",
+            "instakin-dev",
+            "hostinger",
+            "bitscollision",
+            "net"
+          ],
+          "path": [
+            "v1",
+            "order",
+            "Get-Product-Sources"
+          ],
+          "query": [
+            { "key": "ProductID", "value": "3988" }
+          ]
+        }
+      }
+    }
+  ]
+}
